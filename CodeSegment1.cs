@@ -17,7 +17,7 @@ namespace LinkedList1
             Fruit pineapple = new Fruit("pineapple", 100, mango, tail);
             apple.nextFruit = mango;
             mango.nextFruit = pineapple;
-            tail.previousFruit = mango;
+            tail.previousFruit = pineapple;
         }
     }
     class FruitBasket
@@ -39,6 +39,6 @@ namespace LinkedList1
         public Fruit nextFruit;
         public Fruit previousFruit;
     }
-#to do: write a method to traverse the LL, print out the names of the fruits,
-# and sum the calories
+// to do: write a method to traverse the LL, print out the names of the fruits,
+// and sum the calories
 }
