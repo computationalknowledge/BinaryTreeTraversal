@@ -3,13 +3,11 @@ using System;
 namespace LinkedList1
 {
     class Driver
-    {
+    {   static Fruit head = new Fruit("head", 0, null, null);
+        static Fruit tail = new Fruit("tail", 0, null, null);
         static void Main(String [] args)
         {
             FruitBasket basket1 = new FruitBasket();
-            
-            Fruit head = new Fruit("head", 0, null, null);
-            Fruit tail = new Fruit("tail", 0, null, null);
             Fruit apple = new Fruit("Apple", 100, head, null);
             head.nextFruit = apple;
             basket1.firstFruit = apple;
@@ -18,7 +16,25 @@ namespace LinkedList1
             apple.nextFruit = mango;
             mango.nextFruit = pineapple;
             tail.previousFruit = pineapple;
+            Driver.traverseLinkedList();
         }
+
+        public static void traverseLinkedList(){
+            int TotalCalories = 0;
+            Fruit currentNode = head;
+            while (currentNode.fruitName != "TAIL")
+            {
+                Console.WriteLine(currentNode.fruitName);
+                TotalCalories += currentNode.Calories;
+            }
+           
+
+            // get a handle on the first node
+            // get a handle on the next node
+            // keep going till End of List = TAIL
+
+        }
+        
     }
     class FruitBasket
     {
