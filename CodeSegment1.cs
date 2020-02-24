@@ -26,8 +26,9 @@ namespace LinkedList1
             {
                 Console.WriteLine(currentNode.fruitName);
                 TotalCalories += currentNode.Calories;
+                currentNode = currentNode.nextFruit;
             }
-           
+            Console.WriteLine("total calories is {0}", TotalCalories);
 
             // get a handle on the first node
             // get a handle on the next node
