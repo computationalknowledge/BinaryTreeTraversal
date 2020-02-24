@@ -22,7 +22,7 @@ namespace LinkedList1
         public static void traverseLinkedList(){
             int TotalCalories = 0;
             Fruit currentNode = head;
-            while (currentNode.fruitName != "TAIL")
+            while (!((currentNode.fruitName).Equals("tail")))
             {
                 Console.WriteLine(currentNode.fruitName);
                 TotalCalories += currentNode.Calories;
