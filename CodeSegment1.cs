@@ -6,7 +6,7 @@ namespace LinkedList1
     {
         static void Main(String [] args)
         {
-
+            Fruit apple = new Fruit("Apple", 100, null); 
         }
     }
     class FruitBasket
@@ -16,6 +16,14 @@ namespace LinkedList1
 
     class Fruit
     {
-        Fruit a;
+        public Fruit(String thisFruitName, int thisCalories, Fruit aFruit)
+        {
+            fruitName = thisFruitName;
+            Calories = thisCalories;
+            nextFruit = aFruit;
+        }
+        String fruitName = "";
+        int Calories;
+        Fruit nextFruit;
     }
 }
